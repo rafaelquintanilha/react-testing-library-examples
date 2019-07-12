@@ -40,10 +40,10 @@ footer {
   justify-content: center;
   padding: 15px;
   border-top: 1px solid #aaa;
-  width: 400px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 footer a {
@@ -57,6 +57,19 @@ footer a:visited {
 
 .scenario-container {
   padding-bottom: 20px;
+}
+
+.info {
+  background-color: #f8ffff;
+  color: #276f86;
+  padding: 15px 20px;
+  box-shadow: 0 0 0 1px #a9d5de inset, 0 0 0 0 transparent;
+  border-radius: 5px;
+}
+
+.info > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media all and (max-width: 800px) {
