@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FocusInput matches snapshot 1`] = `
+<div>
+  <input
+    aria-label="focus-input"
+    placeholder="Focus me!"
+    type="text"
+  />
+  <button>
+    Click to Focus
+  </button>
+</div>
+`;
