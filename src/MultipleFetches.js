@@ -27,7 +27,7 @@ const MultipleFetches = () => {
           {postResponse.data.title}
         </div>}
       </div>
-      <div>
+      {!postResponse.loading && <div>
         {commentsResponse.loading && <div data-testid="fetch-loading-comments">
           Loading comments...
         </div>}
@@ -39,7 +39,7 @@ const MultipleFetches = () => {
             <li key={comment.id} data-testid="comment-author">{comment.name}</li>
           )}
         </ul>}
-      </div>
+      </div>}
       {postResponse.success 
         && commentsResponse.success 
         && <div data-testid="multiple-fetch-success">
