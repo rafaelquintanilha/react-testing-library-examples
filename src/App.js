@@ -36,10 +36,10 @@ function App() {
         <div className="info">
           <p>
             This page aims to provide a reference to common test cases
-            using <a href="https://github.com/testing-library/react-testing-library">react-testing-library</a>.
+            using <a href="https://github.com/testing-library/react-testing-library">react-testing-library</a> and <a href="https://jestjs.io">Jest</a>.
           </p>
           <p>
-            Notice that throughout the examples multiple ways to get elements and assert data are used.
+            Notice that throughout the examples different approaches are used.
             This is intentional in order to showcase the API.
           </p>
           <p>Other useful links:</p>
