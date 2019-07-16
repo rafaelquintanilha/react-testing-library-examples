@@ -42,6 +42,9 @@ function App() {
             Notice that throughout the examples different approaches are used.
             This is intentional in order to showcase the API.
           </p>
+          <p>
+            <b><a href="https://rafaelquintanilha.com/react-testing-library-common-scenarios/">Check the complete blog post</a> for more details.</b>
+          </p>
           <p>Other useful links:</p>
           <ul>
             <li><a href="https://testing-library.com/docs/react-testing-library/intro">Official Docs</a></li>
@@ -54,7 +57,7 @@ function App() {
           description={<ul>
             <li><code>queryByText</code> and <code>getByText</code> to select a node and assert its presence</li>
             <li><code>rerender</code> to test with different props</li>
-            <li><code>jest.fn</code></li>
+            <li><code>jest.fn</code> to mock functions</li>
             <li><code>fireEvent.click</code> to simulate click events</li>
           </ul>}
           component={<Button text="Submit" onClick={() => {}} />}
@@ -62,18 +65,7 @@ function App() {
           snippet={renderSnippet(snippets.Button)}
         />
         <Scenario
-          title="Scenario 2: Usage with Hooks"
-          description={<ul>
-            <li><code>useState</code>, <code>useRef</code> and <code>useEffect</code> are only implementation details and have no impact in the tests</li>
-            <li><code>getByTestId</code> for dynamic text</li>
-            <li><code>fireEvent.click</code> when simulating checkbox action, even though the component has <code>onChange</code> callback</li>
-          </ul>}
-          component={<Counter />}
-          codeURL={`${REPO_BASE_URL}/Counter.js`}
-          snippet={renderSnippet(snippets.Counter)}
-        />
-        <Scenario
-          title="Scenario 3: Change Input"
+          title="Scenario 2: Input Change"
           description={<ul>
             <li><code>getByLabelText</code> to select elements via <code>aria-label</code></li>
             <li><code>fireEvent.change</code> to simulate change events. Accepts an <code>event</code> object</li>
@@ -83,7 +75,7 @@ function App() {
           snippet={renderSnippet(snippets.ChangeInput)}
         />
         <Scenario
-          title="Scenario 4: Focused Element"
+          title="Scenario 3: Focused Element"
           description={<ul>
             <li><code>container.firstChild</code> is the DOM tree of the component and can be used in snapshot testing</li>
             <li><code>getByPlaceholderText</code> to select via input <code>placeholder</code></li>
@@ -92,6 +84,17 @@ function App() {
           component={<FocusInput />}
           codeURL={`${REPO_BASE_URL}/FocusInput.js`}
           snippet={renderSnippet(snippets.FocusInput)}
+        />
+        <Scenario
+          title="Scenario 4: Effects"
+          description={<ul>
+            <li><code>useState</code>, <code>useRef</code> and <code>useEffect</code> are only implementation details and have no impact in the tests</li>
+            <li><code>getByTestId</code> for dynamic text</li>
+            <li><code>fireEvent.click</code> when simulating checkbox action, even though the component has <code>onChange</code> callback</li>
+          </ul>}
+          component={<Counter />}
+          codeURL={`${REPO_BASE_URL}/Counter.js`}
+          snippet={renderSnippet(snippets.Counter)}
         />
         <Scenario
           title="Scenario 5: setTimeout"
