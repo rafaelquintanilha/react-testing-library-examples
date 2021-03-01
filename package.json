@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.23.0",
     "react": "16.9.0-alpha.0",
     "react-dom": "16.9.0-alpha.0",
     "react-ga": "^2.6.0",
